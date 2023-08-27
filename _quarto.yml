@@ -1,0 +1,79 @@
+project:
+  type: book
+  output-dir: docs
+
+jupyter: python3
+
+book:
+  title: "تحلیل fMRI"
+  subtitle: "تحلیل و بررسی روش‌های مختلف تحلیل داده‌های fMRI"
+  author:
+    - "غزاله سلیمانی"
+    - "علی فتحی"
+    - "مرتضی"
+    - "شرمین شریف‌زاده"
+    - "افرا سوکی"
+    - "شریفه حسینی"
+    - "سارا هنری"
+    - "حسین محدث اردبیلی"
+    - "محسن ابراهیمی"
+  
+  date: "2023-08-06"
+  
+  cover-image: img/cover.png
+  favicon: img/favicon.ico
+  
+  page-footer:
+    left:  |
+      <a href="./index.html">تحلیل fMRI</a>
+    right: |
+      <a href="https://mohsenebrahimy.ir/">هکران مغز</a>
+
+  reader-mode: true
+  site-url: https://mohsenebrahimyir.github.io/fmri-analysis/
+  repo-url: https://github.com/mohsenebrahimyir/fmri-analysis/
+  repo-branch: master
+  repo-actions: none
+
+  output-file: "fmri-analysis"
+
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - installation.qmd
+    - references.qmd
+
+bibliography: 
+  - bib/references.bib
+
+language: style/_fa.yml
+
+crossref:
+  labels: arabic
+  subref-labels: arabic
+
+execute: 
+  echo: false
+  warning: false
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    
+    search: true
+    code-copy: true
+    css: style/rtl-style.css
+    code-link: true
+    dir: rtl
+    csl: style/ieee.csl
+    fig-align: center
+    fig-format: svg
+    date-modified: today
+    date-format: iso
+    mainfont: Vazirmatn
+    include-in-header: style/header.html
+
+editor: source
+

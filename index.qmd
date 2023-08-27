@@ -1,0 +1,34 @@
+# پیش گفتار {-}
+
+```{python}
+from jdatetime import datetime as jdt
+
+now = jdt.now().strftime("%Y-%m-%d")
+```
+
+به همراه این کتابچه می‌توانید مهارت‌های تحلیل
+**fMRI**
+را توسعه دهید.
+
+
+سعی کنید بعد از هر آموزش تمرینات مربوط به آن را انجام دهید. نظرات و
+پیشنهادات خود را می‌توانید از طریق ایمیل
+[mohsenebrahimy.ir\@gmail.com](mailto:mohsenebrahimy.ir@gmail.com){.email}
+برای بهبود کتاب به نویسنده ارسال کنید تا در هر بروزرسانی اصلاحات صورت
+گیرد. این نسخه در تاریخ
+[**`{python} now`**]{dir="ltr"}
+بروزرسانی شده است.
+
+***
+
+- لینک کتاب:
+  * [<https://mohsenebrahimyir.github.io/fmri-analysis/>]{dir="ltr"}
+- لینک گیت هاب:
+  * [<https://github.com/mohsenebrahimyir/fmri-analysis/>]{dir="ltr"}
+
+امیدوارم این کتاب برایتان مفید باشد.
+
+
+::: {.callout-warning}
+متن صلب مسئولیت ...
+::::::

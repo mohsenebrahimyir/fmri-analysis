@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "1  نصب نرم افزار",
+    "section": "",
+    "text": "مثلا کد اینجوری میذاریم\n\nپایتون\n\n1+2\n\n\n3\n\n\n\nبش\n\nls -ltrh\nنحوه ارجاع به مقاله [1] که به معرفی پروژه HCP پرداخته است.\n\n\n\n\n[1] J. S. Elam et al., “The human connectome project: A retrospective,” NeuroImage, vol. 244, p. 118543, 2021."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "مقدمه",
+    "section": "",
+    "text": "اینجا جای مقدمه است."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "منابع",
+    "section": "",
+    "text": "[1] J.\nS. Elam et al., “The human connectome project: A\nretrospective,” NeuroImage, vol. 244, p. 118543,\n2021."
+  }
+]
