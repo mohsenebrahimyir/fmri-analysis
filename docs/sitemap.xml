@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mohsenebrahimyir.github.io/fmri-analysis/installation.html</loc>
-    <lastmod>2023-08-27T21:02:05.375Z</lastmod>
+    <loc>https://mohsenebrahimyir.github.io/fmri-analysis/index.html</loc>
+    <lastmod>2023-09-03T13:14:28.096Z</lastmod>
   </url>
   <url>
     <loc>https://mohsenebrahimyir.github.io/fmri-analysis/intro.html</loc>
     <lastmod>2023-08-27T19:40:43.370Z</lastmod>
   </url>
   <url>
-    <loc>https://mohsenebrahimyir.github.io/fmri-analysis/references.html</loc>
-    <lastmod>2023-08-27T20:58:09.848Z</lastmod>
+    <loc>https://mohsenebrahimyir.github.io/fmri-analysis/installation.html</loc>
+    <lastmod>2023-09-03T10:02:19.863Z</lastmod>
   </url>
   <url>
-    <loc>https://mohsenebrahimyir.github.io/fmri-analysis/index.html</loc>
-    <lastmod>2023-08-28T21:02:32.454Z</lastmod>
+    <loc>https://mohsenebrahimyir.github.io/fmri-analysis/hcp-downloader.html</loc>
+    <lastmod>2023-09-03T13:12:50.346Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mohsenebrahimyir.github.io/fmri-analysis/references.html</loc>
+    <lastmod>2023-08-27T20:58:09.848Z</lastmod>
   </url>
 </urlset>

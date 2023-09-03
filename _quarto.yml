@@ -10,8 +10,8 @@ book:
   author:
     - "غزاله سلیمانی"
     - "علی فتحی"
-    - "مرتضی"
-    - "شرمین شریف‌زاده"
+    - "مرتضی میر جبرئیلی"
+    - "شرمین شریف زاده"
     - "افرا سوکی"
     - "شریفه حسینی"
     - "سارا هنری"
@@ -41,6 +41,7 @@ book:
     - index.qmd
     - intro.qmd
     - installation.qmd
+    - hcp-downloader.qmd
     - references.qmd
 
 bibliography: 
@@ -54,6 +55,7 @@ crossref:
 
 execute: 
   echo: false
+  eval: false
   warning: false
 
 format:

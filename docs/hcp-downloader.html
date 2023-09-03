@@ -6,18 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="غزاله سلیمانی">
-<meta name="author" content="علی فتحی">
-<meta name="author" content="مرتضی میر جبرئیلی">
-<meta name="author" content="شرمین شریف زاده">
-<meta name="author" content="افرا سوکی">
-<meta name="author" content="شریفه حسینی">
-<meta name="author" content="سارا هنری">
-<meta name="author" content="حسین محدث اردبیلی">
-<meta name="author" content="محسن ابراهیمی">
-<meta name="dcterms.date" content="2023-08-06">
 
-<title>تحلیل fMRI</title>
+<title>تحلیل fMRI - 2&nbsp; دانلود مورد از HCP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -40,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./installation.html" rel="prev">
 <link href="./img/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -100,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="ناوبری نوار کناری را تغییر دهید" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">پیش گفتار</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hcp-downloader.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دانلود مورد از HCP</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="ناوبری نوار کناری را تغییر دهید" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -136,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">پیش گفتار</span></a>
   </div>
 </li>
@@ -154,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hcp-downloader.html" class="sidebar-item-text sidebar-link">
+  <a href="./hcp-downloader.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دانلود مورد از HCP</span></span></a>
   </div>
 </li>
@@ -174,7 +199,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">فهرست مطالب</h2>
    
   <ul>
-  <li><a href="#پیش-گفتار" id="toc-پیش-گفتار" class="nav-link active" data-scroll-target="#پیش-گفتار">پیش گفتار</a></li>
+  <li><a href="#نصب-نرم-افزار" id="toc-نصب-نرم-افزار" class="nav-link active" data-scroll-target="#نصب-نرم-افزار"><span class="header-section-number">2.0.1</span> نصب نرم افزار</a></li>
+  <li><a href="#فراخونی-کتابخانههای-مهم" id="toc-فراخونی-کتابخانههای-مهم" class="nav-link" data-scroll-target="#فراخونی-کتابخانههای-مهم"><span class="header-section-number">2.0.2</span> فراخونی کتابخانه‌های مهم</a></li>
+  <li><a href="#تابع-کمکی" id="toc-تابع-کمکی" class="nav-link" data-scroll-target="#تابع-کمکی"><span class="header-section-number">2.0.3</span> تابع کمکی</a></li>
+  <li><a href="#بارگذاری-آیدی-موردها-از-فایل-اکسل-در-گوگل-درایو" id="toc-بارگذاری-آیدی-موردها-از-فایل-اکسل-در-گوگل-درایو" class="nav-link" data-scroll-target="#بارگذاری-آیدی-موردها-از-فایل-اکسل-در-گوگل-درایو"><span class="header-section-number">2.0.4</span> بارگذاری آیدی مورد‌ها از فایل اکسل در گوگل درایو</a></li>
+  <li><a href="#دانلود-داده-از-سرور-hcp-با-s3-amazon" id="toc-دانلود-داده-از-سرور-hcp-با-s3-amazon" class="nav-link" data-scroll-target="#دانلود-داده-از-سرور-hcp-با-s3-amazon"><span class="header-section-number">2.0.5</span> دانلود داده از سرور HCP با <span dir="ltr">s3 Amazon</span></a></li>
   </ul>
 </nav>
     </div>
@@ -183,35 +212,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">تحلیل fMRI</h1>
-<p class="subtitle lead">تحلیل و بررسی روش‌های مختلف تحلیل داده‌های fMRI</p>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دانلود مورد از HCP</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">نویسندگان</div>
-    <div class="quarto-title-meta-contents">
-             <p>غزاله سلیمانی </p>
-             <p>علی فتحی </p>
-             <p>مرتضی میر جبرئیلی </p>
-             <p>شرمین شریف زاده </p>
-             <p>افرا سوکی </p>
-             <p>شریفه حسینی </p>
-             <p>سارا هنری </p>
-             <p>حسین محدث اردبیلی </p>
-             <p>محسن ابراهیمی </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">منتشر شده</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2023-08-06</p>
-    </div>
-  </div>
   
     <div>
     <div class="quarto-title-meta-heading">اصلاح شده</div>
@@ -226,35 +234,92 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<section id="پیش-گفتار" class="level1 unnumbered">
-<h1 class="unnumbered">پیش گفتار</h1><p><img src="img/cover.png" title="تحلیل fMRI" class="quarto-cover-image img-fluid"></p>
-<p>به همراه این کتابچه می‌توانید مهارت‌های تحلیل <strong>fMRI</strong> را توسعه دهید.</p>
-<p>سعی کنید بعد از هر آموزش تمرینات مربوط به آن را انجام دهید. نظرات و پیشنهادات خود را می‌توانید از طریق ایمیل <a href="mailto:mohsenebrahimy.ir@gmail.com" class="email">mohsenebrahimy.ir@gmail.com</a> برای بهبود کتاب به نویسنده ارسال کنید تا در هر بروزرسانی اصلاحات صورت گیرد. این نسخه در تاریخ <span dir="ltr"><strong>1402-06-12</strong></span> بروزرسانی شده است.</p>
-<hr>
-<ul>
-<li>لینک کتاب:
-<ul>
-<li><span dir="ltr"><a href="https://mohsenebrahimyir.github.io/fmri-analysis/" class="uri">https://mohsenebrahimyir.github.io/fmri-analysis/</a></span></li>
-</ul></li>
-<li>لینک گیت هاب:
-<ul>
-<li><span dir="ltr"><a href="https://github.com/mohsenebrahimyir/fmri-analysis/" class="uri">https://github.com/mohsenebrahimyir/fmri-analysis/</a></span></li>
-</ul></li>
-</ul>
-<p>امیدوارم این کتاب برایتان مفید باشد.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="نصب-نرم-افزار" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="نصب-نرم-افزار"><span class="header-section-number">2.0.1</span> نصب نرم افزار</h3>
+<div id="49cf716d" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install boto3</span></code><button title="کپی در Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-title-container flex-fill">
-هشدار
+</section>
+<section id="فراخونی-کتابخانههای-مهم" class="level3" data-number="2.0.2">
+<h3 data-number="2.0.2" class="anchored" data-anchor-id="فراخونی-کتابخانههای-مهم"><span class="header-section-number">2.0.2</span> فراخونی کتابخانه‌های مهم</h3>
+<div id="896507fb" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> boto3</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span></code><button title="کپی در Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div id="120143b1" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>,force_remount<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># change directory to MyDrive(Google Drive's Folder)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># os.chdir("/content/drive/My Drive")</span></span></code><button title="کپی در Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-body-container callout-body">
-<p>اعلامیه سلب مسئولیت …</p>
+</section>
+<section id="تابع-کمکی" class="level3" data-number="2.0.3">
+<h3 data-number="2.0.3" class="anchored" data-anchor-id="تابع-کمکی"><span class="header-section-number">2.0.3</span> تابع کمکی</h3>
+<div id="f066af78" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ensure_dir(file_path):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    directory <span class="op">=</span> os.path.dirname(file_path)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> os.path.exists(directory):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        os.makedirs(directory)</span></code><button title="کپی در Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="بارگذاری-آیدی-موردها-از-فایل-اکسل-در-گوگل-درایو" class="level3" data-number="2.0.4">
+<h3 data-number="2.0.4" class="anchored" data-anchor-id="بارگذاری-آیدی-موردها-از-فایل-اکسل-در-گوگل-درایو"><span class="header-section-number">2.0.4</span> بارگذاری آیدی مورد‌ها از فایل اکسل در گوگل درایو</h3>
+<div id="4a545fc9" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the XLSX file into a DataFrame</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_excel(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'HCP_Drug_Users_ID.xlsx'</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    sheet_name<span class="op">=</span><span class="st">"hcp_tobacco_SSAGA_TB_DSM_Withdr"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="کپی در Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="دانلود-داده-از-سرور-hcp-با-s3-amazon" class="level3" data-number="2.0.5">
+<h3 data-number="2.0.5" class="anchored" data-anchor-id="دانلود-داده-از-سرور-hcp-با-s3-amazon"><span class="header-section-number">2.0.5</span> دانلود داده از سرور HCP با <span dir="ltr">s3 Amazon</span></h3>
+<div id="2e281319" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># s3 amazon acess key</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>access_key <span class="op">=</span> <span class="st">'&lt;YOUR-ACCESS-KEY&gt;'</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>secret_key <span class="op">=</span> <span class="st">'&lt;YOUR-SECRET-KEY&gt;'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># connecting to s1 amazon</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>s3_client <span class="op">=</span> boto3.client(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'s3'</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    aws_access_key_id<span class="op">=</span>access_key, </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    aws_secret_access_key<span class="op">=</span>secret_key</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>s3_resource <span class="op">=</span> boto3.resource(</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'s3'</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    aws_access_key_id<span class="op">=</span>access_key,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    aws_secret_access_key<span class="op">=</span>secret_key</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># create list of paths for downloading them</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> <span class="st">'HCP_1200/'</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>nii_gz <span class="op">=</span> <span class="st">"/MNINonLinear/Results/rfMRI_REST1_RL/rfMRI_REST1_RL.nii.gz"</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>s3_paths<span class="op">=</span> [dataset<span class="op">+</span><span class="bu">str</span>(subject_id)<span class="op">+</span>nii_gz <span class="cf">for</span> subject_id <span class="kw">in</span> df[<span class="st">'Subject'</span>].values]</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Downloading starts ...'</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> boto3.client(</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'s3'</span>,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    aws_access_key_id<span class="op">=</span>access_key,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    aws_secret_access_key<span class="op">=</span>secret_key</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> s3_paths:</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(key)</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  path <span class="op">=</span> key.replace(<span class="st">'/'</span>, os.sep)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  ensure_dir(path)</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span>:</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(path, <span class="st">'wb'</span>) <span class="im">as</span> data:</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>        s3.download_fileobj(<span class="st">'hcp-openaccess'</span>, key, data)</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>  <span class="cf">except</span>:</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># remove the directory which was created for the downloading</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    dir_remove<span class="op">=</span>path.split(<span class="st">'/'</span>)[:<span class="dv">2</span>]</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    dir_remove<span class="op">=</span><span class="st">'/'</span>.join(dir_remove)</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    shutil.rmtree(dir_remove)</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'DATA DOSE NOT EXIST</span><span class="ch">\n</span><span class="st">'</span><span class="op">+</span>dir_remove)</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Downloading finished'</span>)</span></code><button title="کپی در Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -751,10 +816,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./installation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نصب نرم افزار</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text">مقدمه</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">منابع</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

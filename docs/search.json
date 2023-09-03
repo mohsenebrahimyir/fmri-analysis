@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "installation.html",
-    "href": "installation.html",
-    "title": "1  نصب نرم افزار",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "تحلیل fMRI",
     "section": "",
-    "text": "مثلا کد اینجوری میذاریم\n\nپایتون\n\n1+2\n\n\n3\n\n\n\nبش\n\nls -ltrh\nنحوه ارجاع به مقاله [1] که به معرفی پروژه HCP پرداخته است.\n\n\n\n\n[1] J. S. Elam et al., “The human connectome project: A retrospective,” NeuroImage, vol. 244, p. 118543, 2021."
+    "text": "پیش گفتار\nبه همراه این کتابچه می‌توانید مهارت‌های تحلیل fMRI را توسعه دهید.\nسعی کنید بعد از هر آموزش تمرینات مربوط به آن را انجام دهید. نظرات و پیشنهادات خود را می‌توانید از طریق ایمیل mohsenebrahimy.ir@gmail.com برای بهبود کتاب به نویسنده ارسال کنید تا در هر بروزرسانی اصلاحات صورت گیرد. این نسخه در تاریخ 1402-06-12 بروزرسانی شده است.\n\n\nلینک کتاب:\n\nhttps://mohsenebrahimyir.github.io/fmri-analysis/\n\nلینک گیت هاب:\n\nhttps://github.com/mohsenebrahimyir/fmri-analysis/\n\n\nامیدوارم این کتاب برایتان مفید باشد.\n\n\n\n\n\n\nهشدار\n\n\n\nاعلامیه سلب مسئولیت …"
   },
   {
     "objectID": "intro.html",
@@ -14,17 +14,24 @@
     "text": "اینجا جای مقدمه است."
   },
   {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "1  نصب نرم افزار",
+    "section": "",
+    "text": "مثلا کد اینجوری میذاریم\n\nپایتون\n\n1+2\n\n\n3\n\n\n\nبش\n\nls -ltrh\nنحوه ارجاع به مقاله [1] که به معرفی پروژه HCP پرداخته است.\n\n\n\n\n[1] J. S. Elam et al., “The human connectome project: A retrospective,” NeuroImage, vol. 244, p. 118543, 2021."
+  },
+  {
+    "objectID": "hcp-downloader.html",
+    "href": "hcp-downloader.html",
+    "title": "2  دانلود مورد از HCP",
+    "section": "",
+    "text": "2.0.1 نصب نرم افزار\n\n!pip install boto3\n\n\n\n2.0.2 فراخونی کتابخانه‌های مهم\n\nimport boto3\nimport re\nimport os\nimport pandas as pd\nfrom google.colab import drive\nimport shutil\n\n\ndrive.mount('/content/drive',force_remount=True)\n# change directory to MyDrive(Google Drive's Folder)\n# os.chdir(\"/content/drive/My Drive\")\n\n\n\n2.0.3 تابع کمکی\n\ndef ensure_dir(file_path):\n    directory = os.path.dirname(file_path)\n    if not os.path.exists(directory):\n        os.makedirs(directory)\n\n\n\n2.0.4 بارگذاری آیدی مورد‌ها از فایل اکسل در گوگل درایو\n\n# Load the XLSX file into a DataFrame\ndf = pd.read_excel(\n    'HCP_Drug_Users_ID.xlsx',\n    sheet_name=\"hcp_tobacco_SSAGA_TB_DSM_Withdr\"\n)\n\n\n\n2.0.5 دانلود داده از سرور HCP با s3 Amazon\n\n# s3 amazon acess key\naccess_key = '&lt;YOUR-ACCESS-KEY&gt;'\nsecret_key = '&lt;YOUR-SECRET-KEY&gt;'\n\n# connecting to s1 amazon\ns3_client = boto3.client(\n    's3',\n    aws_access_key_id=access_key, \n    aws_secret_access_key=secret_key\n)\ns3_resource = boto3.resource(\n    's3',\n    aws_access_key_id=access_key,\n    aws_secret_access_key=secret_key\n)\n\n# create list of paths for downloading them\ndataset = 'HCP_1200/'\nnii_gz = \"/MNINonLinear/Results/rfMRI_REST1_RL/rfMRI_REST1_RL.nii.gz\"\ns3_paths= [dataset+str(subject_id)+nii_gz for subject_id in df['Subject'].values]\n\nprint('Downloading starts ...')\ns3 = boto3.client(\n    's3',\n    aws_access_key_id=access_key,\n    aws_secret_access_key=secret_key\n)\n\nfor key in s3_paths:\n  print(key)\n  path = key.replace('/', os.sep)\n  ensure_dir(path)\n  try:\n    with open(path, 'wb') as data:\n        s3.download_fileobj('hcp-openaccess', key, data)\n  except:\n    # remove the directory which was created for the downloading\n    dir_remove=path.split('/')[:2]\n    dir_remove='/'.join(dir_remove)\n    shutil.rmtree(dir_remove)\n    print('DATA DOSE NOT EXIST\\n'+dir_remove)\nprint('Downloading finished')"
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "منابع",
     "section": "",
     "text": "[1] J.\nS. Elam et al., “The human connectome project: A\nretrospective,” NeuroImage, vol. 244, p. 118543,\n2021."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "تحلیل fMRI",
-    "section": "",
-    "text": "پیش گفتار\nبه همراه این کتابچه می‌توانید مهارت‌های تحلیل fMRI را توسعه دهید.\nسعی کنید بعد از هر آموزش تمرینات مربوط به آن را انجام دهید. نظرات و پیشنهادات خود را می‌توانید از طریق ایمیل mohsenebrahimy.ir@gmail.com برای بهبود کتاب به نویسنده ارسال کنید تا در هر بروزرسانی اصلاحات صورت گیرد. این نسخه در تاریخ 1402-06-07 بروزرسانی شده است.\n\n\nلینک کتاب:\n\nhttps://mohsenebrahimyir.github.io/fmri-analysis/\n\nلینک گیت هاب:\n\nhttps://github.com/mohsenebrahimyir/fmri-analysis/\n\n\nامیدوارم این کتاب برایتان مفید باشد.\n\n\n\n\n\n\nهشدار\n\n\n\nاعلامیه سلب مسئولیت …"
   }
 ]

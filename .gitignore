@@ -1,6 +1,7 @@
 # Videos
 video/
 documents/
+data/
 
 # History files
 .Rhistory
