@@ -7,7 +7,8 @@ from jdatetime import datetime as jdt
 now = jdt.now().strftime("%Y-%m-%d")
 ```
 
-به همراه این کتابچه می‌توانید مهارت‌های تحلیل
+به 
+همراه این کتابچه می‌توانید مهارت‌های تحلیل
 **fMRI**
 را توسعه دهید.
 
