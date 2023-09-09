@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "تحلیل fMRI",
     "section": "",
-    "text": "پیش گفتار\nبه همراه این کتابچه می‌توانید مهارت‌های تحلیل fMRI را توسعه دهید.\nسعی کنید بعد از هر آموزش تمرینات مربوط به آن را انجام دهید. نظرات و پیشنهادات خود را می‌توانید از طریق ایمیل mohsenebrahimy.ir@gmail.com برای بهبود کتاب به نویسنده ارسال کنید تا در هر بروزرسانی اصلاحات صورت گیرد. این نسخه در تاریخ 1402-06-12 بروزرسانی شده است.\n\n\nلینک کتاب:\n\nhttps://mohsenebrahimyir.github.io/fmri-analysis/\n\nلینک گیت هاب:\n\nhttps://github.com/mohsenebrahimyir/fmri-analysis/\n\n\nامیدوارم این کتاب برایتان مفید باشد.\n\n\n\n\n\n\nهشدار\n\n\n\nاعلامیه سلب مسئولیت …"
+    "text": "پیش گفتار\nهمراه این کتابچه می‌توانید مهارت‌های تحلیل fMRI را توسعه دهید.\nسعی کنید بعد از هر آموزش تمرینات مربوط به آن را انجام دهید. نظرات و پیشنهادات خود را می‌توانید از طریق ایمیل mohsenebrahimy.ir@gmail.com برای بهبود کتاب به نویسنده ارسال کنید تا در هر بروزرسانی اصلاحات صورت گیرد. این نسخه در تاریخ {python} now بروزرسانی شده است.\n\n\nلینک کتاب:\n\nhttps://mohsenebrahimyir.github.io/fmri-analysis/\n\nلینک گیت هاب:\n\nhttps://github.com/mohsenebrahimyir/fmri-analysis/\n\n\nامیدوارم این کتاب برایتان مفید باشد.\n\n\n\n\n\n\nهشدار\n\n\n\nاعلامیه سلب مسئولیت …"
   },
   {
     "objectID": "intro.html",
@@ -33,5 +33,12 @@
     "title": "منابع",
     "section": "",
     "text": "[1] J.\nS. Elam et al., “The human connectome project: A\nretrospective,” NeuroImage, vol. 244, p. 118543,\n2021."
+  },
+  {
+    "objectID": "installation.html#تیتر-۲",
+    "href": "installation.html#تیتر-۲",
+    "title": "1  نصب نرم افزار",
+    "section": "1.1 تیتر ۲",
+    "text": "1.1 تیتر ۲\n\nلیست\n\nزیر لیست\nزیر لیست ۲\n\n\n\n\n\n\n[1] J. S. Elam et al., “The human connectome project: A retrospective,” NeuroImage, vol. 244, p. 118543, 2021."
   }
 ]
